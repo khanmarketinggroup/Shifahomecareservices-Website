@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Need reliable home care for your loved one? Shifa Home Care provides compassionate non-medical home care services in Cook, DuPage, Kane & Will counties. Call (847) 648-7075.">
+  <meta name="keywords" content="home care, non-medical care, Chicagoland, elderly care, senior care, caregiver services">
+  <meta name="author" content="Shifa Home Care">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Need Reliable Home Care for Your Loved One? - Shifa Home Care">
+  <meta property="og:description" content="Compassionate non-medical home care services throughout Chicagoland. Call (847) 648-7075 today.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shifahomecareservices.com/images/shifa-logo-full.png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCXKW2986H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VCXKW2986H');
+  </script>
+
+  <title>Need Reliable Home Care for Your Loved One? | Shifa Home Care</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/shifa-favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/shifa-favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/shifa-favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Landing page specific styles */
+    .landing-header {
+      background: white;
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .landing-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .landing-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--green);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
+    }
+
+    .landing-phone:hover {
+      background: #388e3c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(67, 160, 71, 0.4);
+    }
+
+    .landing-phone i {
+      font-size: 1.5rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .landing-hero {
+      background: linear-gradient(135deg, var(--blue) 0%, #1976d2 100%);
+      color: white;
+      padding: 4rem 0 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .landing-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.15);
+      z-index: 0;
+    }
+
+    .landing-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .landing-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      font-weight: 700;
+    }
+
+    .landing-hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      font-weight: 500;
+    }
+
+    .hero-call-btn {
+      background: white !important;
+      color: var(--blue) !important;
+      font-size: 1.25rem !important;
+      padding: 1rem 2.5rem !important;
+      border: 3px solid white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-call-btn:hover {
+      background: var(--green) !important;
+      color: white !important;
+      border-color: var(--green);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(92, 184, 92, 0.6);
+    }
+
+    .hero-call-btn i {
+      animation: pulse 2s infinite;
+    }
+
+    .services-checklist {
+      background: white;
+      padding: 3rem 0;
+    }
+
+    .services-checklist h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .service-item:nth-child(7),
+    .service-item:nth-child(8) {
+      grid-column: span 1;
+    }
+
+    .services-list::after {
+      content: '';
+      grid-column: span 1;
+    }
+
+    .service-item i {
+      color: var(--green);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .areas-section {
+      background: #f8f9fa;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .areas-section h2 {
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .areas-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .area-badge {
+      background: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .testimonials-section {
+      background: white;
+      padding: 3rem 0;
+    }
+
+    .testimonials-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .testimonials-grid-landing {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card-landing {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--green);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .testimonial-card-landing:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .testimonial-card-landing .stars {
+      display: flex;
+      gap: 4px;
+      color: #ffc107;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-card-landing .testimonial-text {
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      font-style: normal;
+    }
+
+    .testimonial-card-landing .testimonial-author {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #e0e0e0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card-landing .testimonial-author strong {
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-card-landing .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      opacity: 0.7;
+    }
+
+    .landing-form-section {
+      background: linear-gradient(135deg, var(--blue) 0%, #1976d2 100%);
+      color: white;
+      padding: 4rem 0;
+    }
+
+    .landing-form-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .landing-form-section > .container > p {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: white;
+      opacity: 1;
+    }
+
+    .landing-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .landing-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .landing-form label {
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .landing-form input,
+    .landing-form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .landing-form input:focus,
+    .landing-form textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+    }
+
+    .landing-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .landing-form .btn-primary {
+      width: 100%;
+      padding: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    .form-success-message {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 4px 15px rgba(92, 184, 92, 0.3);
+    }
+
+    .success-heading {
+      color: var(--green);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .success-text {
+      color: #444;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .success-phone {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .success-phone-link {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .success-phone-link:hover {
+      color: var(--green);
+      border-bottom-color: var(--green);
+    }
+
+    .landing-footer {
+      background: white;
+      color: var(--blue);
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    }
+
+    .landing-footer p {
+      margin: 0.5rem 0;
+      color: var(--blue);
+      opacity: 0.9;
+    }
+
+    .landing-footer a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .landing-footer a:hover {
+      color: var(--green);
+    }
+
+    .landing-footer strong {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .landing-hero h1 {
+        font-size: 2rem;
+      }
+
+      .landing-phone {
+        font-size: 1.1rem;
+        padding: 0.875rem 1.5rem;
+      }
+
+      .hero-call-btn {
+        font-size: 1.1rem !important;
+        padding: 0.875rem 1.5rem !important;
+      }
+
+      .landing-form {
+        padding: 1.5rem;
+      }
+
+      .form-success-message {
+        padding: 40px 24px;
+      }
+
+      .success-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+      }
+
+      .success-heading {
+        font-size: 1.75rem;
+      }
+
+      .success-text {
+        font-size: 1rem;
+      }
+
+      .success-phone {
+        font-size: 0.95rem;
+      }
+
+      .success-phone-link {
+        font-size: 1.05rem;
+      }
+
+      .testimonials-grid-landing {
+        grid-template-columns: 1fr;
+      }
+
+      .services-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Simple Header with Logo and Phone -->
+  <header class="landing-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/shifa-icon.png" alt="Shifa Home Care Logo">
+        <span class="logo-text"><span class="blue">Shifa</span> <span class="green">Home Care</span></span>
+      </a>
+      <a href="tel:8476487075" class="landing-phone">
+        <i class="fa-solid fa-phone"></i>
+        <span>(847) 648-7075</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="landing-hero">
+    <div class="container">
+      <h1>Need Reliable Home Care for Your Loved One?</h1>
+      <p>Compassionate, professional care in the comfort of home. Serving Chicagoland families since 2020.</p>
+      <a href="tel:8476487075" class="btn btn-secondary hero-call-btn">
+        <i class="fa-solid fa-phone"></i> Call Now: (847) 648-7075
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-checklist">
+    <div class="container">
+      <h2>Our Home Care Services</h2>
+      <div class="services-list">
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Personal Care</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Companionship</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Meal Preparation</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Light Housekeeping</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Transportation</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Medication Reminders</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Errands & Shopping</span>
+        </div>
+        <div class="service-item">
+          <i class="fa-solid fa-check-circle"></i>
+          <span>Daily Living Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="areas-section">
+    <div class="container">
+      <h2>Proudly Serving Chicagoland</h2>
+      <div class="areas-list">
+        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Cook County</span>
+        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> DuPage County</span>
+        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Kane County</span>
+        <span class="area-badge"><i class="fa-solid fa-location-dot"></i> Will County</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>What Families Are Saying</h2>
+      <div class="testimonials-grid-landing">
+        <div class="testimonial-card-landing">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I was recommended to try Shifa Home Care for my elderly father, and I'm so glad I did—it was the best decision I could have made. The Shifa Care Agent was always punctual and provided exceptional care and comfort to my father. He truly enjoys the caregiver's company, feeling as if they are part of our family. The Shifa Team also assisted with transportation for doctor's visits, which was incredibly helpful. I highly recommend Shifa Home Care!"</p>
+          <div class="testimonial-author">
+            <strong>Nafees S.</strong>
+            <span class="google-badge"><i class="fa-brands fa-google"></i> Google Review</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card-landing">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Great experience! The staff was caring, professional, and easy to work with. They really looked after my family like their own. Highly recommend."</p>
+          <div class="testimonial-author">
+            <strong>Zak A.</strong>
+            <span class="google-badge"><i class="fa-brands fa-google"></i> Google Review</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card-landing">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"We had 2 caregivers for our family from Shifa Home Care for our grandparents and they are very caring and you can tell they care for elders as well. 10/10 experience"</p>
+          <div class="testimonial-author">
+            <strong>Kayenath K.</strong>
+            <span class="google-badge"><i class="fa-brands fa-google"></i> Google Review</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card-landing">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I hired Shifa Care for a couple of my elderly family members and they did an amazing job. The services and caretakers are extremely supportive and helpful. Loved the entire process. Keep up the great services!"</p>
+          <div class="testimonial-author">
+            <strong>Reshma Z.</strong>
+            <span class="google-badge"><i class="fa-brands fa-google"></i> Google Review</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="landing-form-section">
+    <div class="container">
+      <h2>Get Started Today</h2>
+      <p>Fill out the form below and we'll contact you within 24 hours to discuss your care needs.</p>
+
+      <div class="landing-form">
+        <form action="https://api.web3forms.com/submit" method="POST" id="landing-form">
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="fb45a29a-5246-4e31-873f-7043b87c51ad">
+          <input type="hidden" name="subject" value="New Lead - Home Care Landing Page">
+          <input type="hidden" name="from_name" value="Shifa Home Care - Landing Page">
+
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+          </div>
+
+          <div class="form-group">
+            <label for="message">How can we help? *</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your care needs..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request Information</button>
+        </form>
+
+        <div id="form-success" class="form-success-message">
+          <div class="success-icon">✓</div>
+          <h3 class="success-heading">Thank You!</h3>
+          <p class="success-text">Thank you! We've received your message and will contact you within 24 hours.</p>
+          <p class="success-phone">Need immediate assistance? Call us at <a href="tel:8476487075" class="success-phone-link">(847) 648-7075</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simple Footer -->
+  <footer class="landing-footer">
+    <div class="container">
+      <img src="images/shifa-logo-full.png" alt="Shifa Home Care" style="max-width: 200px; margin-bottom: 1rem;">
+      <p><strong>Care You Can Trust. Support From The Heart.</strong></p>
+      <p>201 Army Trail Rd Suite 206D, Bloomingdale, IL 60108</p>
+      <p><a href="tel:8476487075">(847) 648-7075</a> | <a href="mailto:Office@ShifaHomeCareServices.com">Office@ShifaHomeCareServices.com</a></p>
+      <p>Mon-Fri: 9:30am - 3:30pm</p>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem;">&copy; 2025 Shifa Home Care. All rights reserved. | Licensed by IDPH | Approved by IDoA</p>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission handling
+    const form = document.getElementById('landing-form');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          form.style.display = 'none';
+          formSuccess.style.display = 'block';
+
+          // Track conversion in Google Analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+              'event_category': 'Lead',
+              'event_label': 'Landing Page Form Submission'
+            });
+          }
+        } else {
+          alert('Something went wrong. Please call us directly at (847) 648-7075.');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        alert('Something went wrong. Please call us directly at (847) 648-7075.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Track phone clicks in Google Analytics
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'phone_call', {
+            'event_category': 'Contact',
+            'event_label': 'Click to Call'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
