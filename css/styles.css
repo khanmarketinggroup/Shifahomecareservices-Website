@@ -666,11 +666,6 @@ nav {
   margin-right: auto;
 }
 
-.google-rating-header > i {
-  font-size: 3rem;
-  color: #4285f4;
-}
-
 .rating-info {
   display: flex;
   flex-direction: column;
@@ -775,10 +770,6 @@ nav {
   font-size: 0.85rem;
   color: var(--blue);
   opacity: 0.7;
-}
-
-.google-badge i {
-  font-size: 1rem;
 }
 
 .slider-btn {
