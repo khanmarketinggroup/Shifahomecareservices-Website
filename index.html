@@ -33,6 +33,24 @@
     gtag('config', 'AW-17873588995');
   </script>
 
+  <!-- Click to call conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17873588995/YzOrCJKG3OIbEIOm5cpC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <title>Shifa Home Care | Non-Medical Home Care in Chicagoland</title>
   <link rel="canonical" href="https://shifahomecareservices.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="images/shifa-favicon.png">
@@ -195,7 +213,7 @@
           <p>Shifa Home Care provides professional, non-medical home care services throughout Chicagoland. Our dedicated caregivers help seniors and individuals maintain independence and quality of life in the comfort of their own homes.</p>
           <div class="hero-buttons">
             <a href="contact.html" class="btn btn-primary">Get Started Today</a>
-            <a href="tel:8476487075" class="btn btn-outline">Call (847) 648-7075</a>
+            <a href="tel:8476487075" class="btn btn-outline" onclick="return gtag_report_conversion('tel:8476487075')">Call (847) 648-7075</a>
           </div>
         </div>
         <div class="hero-image">
@@ -650,7 +668,7 @@
         <p>Contact us today to learn more about our services and how we can help your loved one live more comfortably and independently at home.</p>
         <div class="cta-buttons">
           <a href="contact.html" class="btn btn-primary">Contact Us</a>
-          <a href="tel:8476487075" class="btn btn-secondary">Call (847) 648-7075</a>
+          <a href="tel:8476487075" class="btn btn-secondary" onclick="return gtag_report_conversion('tel:8476487075')">Call (847) 648-7075</a>
         </div>
       </div>
     </div>
@@ -689,7 +707,7 @@
         <div class="footer-links footer-contact">
           <h4>Contact Us</h4>
           <p>201 Army Trail Rd Suite 206D<br>Bloomingdale, IL 60108</p>
-          <p><a href="tel:8476487075">(847) 648-7075</a></p>
+          <p><a href="tel:8476487075" onclick="return gtag_report_conversion('tel:8476487075')">(847) 648-7075</a></p>
           <p><a href="mailto:Office@ShifaHomeCareServices.com">Office@ShifaHomeCareServices.com</a></p>
           <p>Mon-Fri: 9:30am - 3:30pm</p>
         </div>

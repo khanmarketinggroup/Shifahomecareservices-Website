@@ -32,6 +32,24 @@
     gtag('config', 'AW-17873588995');
   </script>
 
+  <!-- Click to call conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17873588995/YzOrCJKG3OIbEIOm5cpC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <title>Need Reliable Home Care for Your Loved One? | Shifa Home Care</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/shifa-favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/shifa-favicon.png">
@@ -523,7 +541,7 @@
         <img src="images/shifa-icon.png" alt="Shifa Home Care Logo">
         <span class="logo-text"><span class="blue">Shifa</span> <span class="green">Home Care</span></span>
       </a>
-      <a href="tel:8476487075" class="landing-phone">
+      <a href="tel:8476487075" class="landing-phone" onclick="return gtag_report_conversion('tel:8476487075')">
         <i class="fa-solid fa-phone"></i>
         <span>(847) 648-7075</span>
       </a>
@@ -535,7 +553,7 @@
     <div class="container">
       <h1>Need Reliable Home Care for Your Loved One?</h1>
       <p>Compassionate, professional care in the comfort of home. Serving Chicagoland families since 2020.</p>
-      <a href="tel:8476487075" class="btn btn-secondary hero-call-btn">
+      <a href="tel:8476487075" class="btn btn-secondary hero-call-btn" onclick="return gtag_report_conversion('tel:8476487075')">
         <i class="fa-solid fa-phone"></i> Call Now: (847) 648-7075
       </a>
       <p style="color: var(--green); font-weight: 600; margin-top: 1.5rem; font-size: 1.1rem;">Help your loved one stay safe and independent at home — no nursing home needed.</p>
@@ -722,7 +740,7 @@
           <div class="success-icon">✓</div>
           <h3 class="success-heading">Thank You!</h3>
           <p class="success-text">Thank you! We've received your message and will contact you within 24 hours.</p>
-          <p class="success-phone">Need immediate assistance? Call us at <a href="tel:8476487075" class="success-phone-link">(847) 648-7075</a></p>
+          <p class="success-phone">Need immediate assistance? Call us at <a href="tel:8476487075" class="success-phone-link" onclick="return gtag_report_conversion('tel:8476487075')">(847) 648-7075</a></p>
         </div>
       </div>
     </div>
@@ -734,7 +752,7 @@
       <img src="images/shifa-logo-full.png" alt="Shifa Home Care" style="max-width: 200px; margin-bottom: 1rem;">
       <p><strong>Care You Can Trust. Support From The Heart.</strong></p>
       <p>201 Army Trail Rd Suite 206D, Bloomingdale, IL 60108</p>
-      <p><a href="tel:8476487075">(847) 648-7075</a> | <a href="mailto:Office@ShifaHomeCareServices.com">Office@ShifaHomeCareServices.com</a></p>
+      <p><a href="tel:8476487075" onclick="return gtag_report_conversion('tel:8476487075')">(847) 648-7075</a> | <a href="mailto:Office@ShifaHomeCareServices.com">Office@ShifaHomeCareServices.com</a></p>
       <p>Mon-Fri: 9:30am - 3:30pm</p>
       <p style="margin-top: 1.5rem; font-size: 0.9rem;">&copy; 2025 Shifa Home Care. All rights reserved. | Licensed by IDPH | Approved by IDoA</p>
     </div>
@@ -767,13 +785,12 @@
           form.style.display = 'none';
           formSuccess.style.display = 'block';
 
-          // Track conversion in Google Analytics
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'conversion', {
-              'event_category': 'Lead',
-              'event_label': 'Landing Page Form Submission'
-            });
-          }
+          // Track form conversion
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17873588995/REOYCK-LzuIbEIOm5cpC',
+              'value': 1.0,
+              'currency': 'USD'
+          });
         } else {
           alert('Something went wrong. Please call us directly at (847) 648-7075.');
           submitBtn.textContent = originalText;

@@ -33,6 +33,24 @@
     gtag('config', 'AW-17873588995');
   </script>
 
+  <!-- Click to call conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17873588995/YzOrCJKG3OIbEIOm5cpC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <title>Join Our Team | Caregiver Careers at Shifa Home Care</title>
   <link rel="canonical" href="https://shifahomecareservices.com/join-our-team">
   <link rel="icon" type="image/png" sizes="32x32" href="images/shifa-favicon.png">
@@ -278,7 +296,7 @@
         <p>We'd love to hear from you. Reach out to our team to learn more about caregiver opportunities at Shifa Home Care.</p>
         <div class="cta-buttons">
           <a href="contact.html" class="btn btn-primary">Contact Us</a>
-          <a href="tel:8476487075" class="btn btn-secondary">Call (847) 648-7075</a>
+          <a href="tel:8476487075" class="btn btn-secondary" onclick="return gtag_report_conversion('tel:8476487075')">Call (847) 648-7075</a>
         </div>
       </div>
     </div>
@@ -317,7 +335,7 @@
         <div class="footer-links footer-contact">
           <h4>Contact Us</h4>
           <p>201 Army Trail Rd Suite 206D<br>Bloomingdale, IL 60108</p>
-          <p><a href="tel:8476487075">(847) 648-7075</a></p>
+          <p><a href="tel:8476487075" onclick="return gtag_report_conversion('tel:8476487075')">(847) 648-7075</a></p>
           <p><a href="mailto:Office@ShifaHomeCareServices.com">Office@ShifaHomeCareServices.com</a></p>
           <p>Mon-Fri: 9:30am - 3:30pm</p>
         </div>
